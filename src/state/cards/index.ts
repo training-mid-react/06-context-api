@@ -1,9 +1,12 @@
 import { ICard } from "../../core/interfaces/card";
 import { ICardsState } from "../../core/interfaces/cardsState";
-import { cardsActions } from "./actions";
+import { IPokemon } from "../../core/interfaces/pokemon";
+import { cardsActions, error } from "./actions";
 
 export const cardsInitialState: ICardsState = {
-  cards: []
+  cards: [],
+  pokemon: null,
+  error: null
 }
 
 export const cardsCases = {
@@ -30,6 +33,18 @@ export const cardsCases = {
     return {
       ...state,
       cards: state.cards.filter(card => card.id !== payload),
+    };
+  },
+  [cardsActions.GET_POKEMON]: (state: ICardsState, payload: IPokemon) => {
+    return {
+      ...state,
+      pokemon: payload,
+    };
+  },
+  [cardsActions.ERROR]: (state: ICardsState, payload: string) => {
+    return {
+      ...state,
+      error: payload,
     };
   },
 }
