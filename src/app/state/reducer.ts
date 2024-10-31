@@ -1,4 +1,4 @@
-import { IAction, IState } from "../core/interfaces/state";
+import { IAction, IState } from "../interfaces/state";
 import { cardsCases, cardsInitialState } from "./cards";
 
 export const initialState = {

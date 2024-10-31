@@ -1,6 +1,6 @@
 import { createContext, useReducer } from "react";
 import { initialState, reducer } from "./reducer";
-import { IContext, IState } from "../core/interfaces/state";
+import { IContext, IState } from "../interfaces/state";
 
 export const AppContext = createContext<IContext>({ state: {} as IState, dispatch: () => { } });
 

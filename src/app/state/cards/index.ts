@@ -1,6 +1,6 @@
-import { ICard } from "../../core/interfaces/card";
-import { ICardsState } from "../../core/interfaces/cardsState";
-import { IPokemon } from "../../core/interfaces/pokemon";
+import { ICard } from "../../interfaces/card";
+import { ICardsState } from "../../interfaces/cardsState";
+import { IPokemon } from "../../interfaces/pokemon";
 import { cardsActions, error } from "./actions";
 
 export const cardsInitialState: ICardsState = {

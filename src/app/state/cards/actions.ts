@@ -1,5 +1,5 @@
-import { ICard } from "../../core/interfaces/card";
-import { IPokemon } from "../../core/interfaces/pokemon";
+import { ICard } from "../../interfaces/card";
+import { IPokemon } from "../../interfaces/pokemon";
 
 export const cardsActions = {
   FLIPP_CARD: 'FLIPP_CARD',

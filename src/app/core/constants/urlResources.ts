@@ -1,4 +1,4 @@
-import { environment } from "../../environment/environment";
+import { environment } from "../../../environment/environment";
 
 export const urlResources = {
   user: `${environment.apiUrl}/user`,
