@@ -1,13 +1,13 @@
-import { ICard } from "../../interfaces/card";
-import { ICardsState } from "../../interfaces/cardsState";
-import { IPokemon } from "../../interfaces/pokemon";
-import { cardsActions, error } from "./actions";
+import { ICard } from '../../interfaces/card';
+import { ICardsState } from '../../interfaces/cardsState';
+import { IPokemon } from '../../interfaces/pokemon';
+import { cardsActions } from './actions';
 
 export const cardsInitialState: ICardsState = {
   cards: [],
   pokemon: null,
   error: null
-}
+};
 
 export const cardsCases = {
   [cardsActions.FLIPP_CARD]: (state: ICardsState) => {
@@ -47,4 +47,4 @@ export const cardsCases = {
       error: payload,
     };
   },
-}
+};
