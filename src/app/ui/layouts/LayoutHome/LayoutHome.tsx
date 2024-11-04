@@ -3,7 +3,8 @@ import { ReactNode } from 'react';
 interface Props {
     children: ReactNode | ReactNode[];
 }
-
-export const LayoutMain = ({ children }: Props) => {
+const LayoutHome = ({ children }: Props) => {
     return <div>{children}</div>;
 };
+
+export default LayoutHome;

@@ -1,13 +1,14 @@
 import { IAction, IState } from '../interfaces/state';
-import { cardsCases, cardsInitialState } from './cards';
+import { boardGameCases, boardGameInitialState } from './board-game';
 
 export const initialState = {
-  ...cardsInitialState
-  //...reducerXInitialState
+  ...boardGameInitialState 
+ 
 };
 
-export const reducer = (state: IState, action: IAction) => {
-  const cases = { ...cardsCases };
-  // const cases = { ...cardsCases, ...gameCases };
+export const reducer = (state: IState, action: IAction): IState => {
+  const cases = { ...boardGameCases };
+  
   return cases[action.type](state, action.payload) || state;
+ 
 };

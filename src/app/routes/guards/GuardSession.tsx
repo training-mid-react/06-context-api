@@ -1,15 +1,17 @@
-import { ReactNode } from 'react';
-import { Navigate } from 'react-router-dom';
+import { useBoardGame } from '@core/hooks';
+import { ReactNode, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 interface IGuardProps {
-  children: ReactNode;
+    children: ReactNode;
 }
 export const Guard = ({ children }: IGuardProps) => {
-  const { currentUser } = { currentUser: true };
+    const { players } = useBoardGame();
+    const navigate = useNavigate();
 
-  if (!currentUser) {
-    return <Navigate to='/auth' replace />;
-  }
+    useEffect(() => {
+        if (!players?.length) return navigate('/');
+    }, [players]);
 
-  return children;
+    return children;
 };

@@ -6,7 +6,8 @@
     "module": "ESNext",
     "skipLibCheck": true,
     "paths": {
-      "@ui/*": ["./src/app/ui/*"]
+      "@ui/*": ["./src/app/ui/*"],
+      "@core/*": ["./src/app/core/*"],
     },
 
     /* Bundler mode */
