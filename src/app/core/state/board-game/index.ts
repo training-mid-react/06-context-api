@@ -1,7 +1,7 @@
 import { IBoardGameState, IPlayer } from '@core/interfaces';
 import { boardGameActions } from './actions';
 import { OptionsColors } from '@core/types';
-import { BASE_MATRIZ } from '@core/constants';
+import { BASE_MATRIZ, COLS, ROWS } from '@core/constants';
 
 export const boardGameInitialState: IBoardGameState = {
     winner: '',
@@ -19,7 +19,7 @@ export const boardGameCases = {
 
     [boardGameActions.SET_WINNER]: (
         state: IBoardGameState,
-        payload?: IPlayer
+        payload?: string
     ) => {
         return { ...state, winner: payload };
     },
@@ -31,7 +31,16 @@ export const boardGameCases = {
         return { ...state, board: payload };
     },
 
-    [boardGameActions.RESET_STATE]: () => {
-        return { board: BASE_MATRIZ };
+    [boardGameActions.RESET_STATE]: (
+        _?: IBoardGameState,
+        _payload?: OptionsColors[][]
+    ): IBoardGameState => {
+        return {
+            winner: '',
+            board: new Array(ROWS + 1)
+                .fill(null)
+                .map(() => new Array(COLS).fill(null)),
+            players: [],
+        };
     },
 };
