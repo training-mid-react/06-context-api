@@ -1,8 +1,7 @@
-import { OptionsColors } from "@core/types";
-import { checkFourInLine } from "./checkFourInLine";
-import { IPlayer } from "@core/interfaces";
-import { checkTie,  } from './checkTie';
-
+import { OptionsColors } from '@core/types';
+import { checkFourInLine } from './checkFourInLine';
+import { IPlayer } from '@core/interfaces';
+import { checkTie } from './checkTie';
 
 /**
  * Verifica si un jugador ha ganado al colocar una pieza en el tablero.
@@ -18,20 +17,28 @@ import { checkTie,  } from './checkTie';
  * @returns {string | undefined} - { player }  Retorna el nombre del jugador
  * ganador; de lo contrario retorna undefined.
  */
-export const checkWinner = ({board, row, col, players}:{board: OptionsColors[][], row: number, col: number, players: IPlayer[] | undefined}):  string|undefined => {
+export const checkWinner = ({
+    board,
+    row,
+    col,
+    players,
+}: {
+    board: OptionsColors[][];
+    row: number;
+    col: number;
+    players: IPlayer[] | undefined;
+}): string | undefined => {
     const player = board[row][col];
-    const isFourInLine = checkFourInLine({board, row, col, rowDir: 0, colDir: 1}) || // horizontal
-        checkFourInLine({board, row, col,rowDir: 1,colDir: 0}) || // vertical
-        checkFourInLine({board, row, col,rowDir: 1,colDir: 1}) || // diagonal /
-        checkFourInLine({board, row, col,rowDir: 1,colDir: -1}); // diagonal \
+    const isFourInLine =
+        checkFourInLine({ board, row, col, rowDir: 0, colDir: 1 }) || // horizontal
+        checkFourInLine({ board, row, col, rowDir: 1, colDir: 0 }) || // vertical
+        checkFourInLine({ board, row, col, rowDir: 1, colDir: 1 }) || // diagonal /
+        checkFourInLine({ board, row, col, rowDir: 1, colDir: -1 }); // diagonal \
 
     const winner = players?.find((p) => p.color === player);
-    
-  const isATie = checkTie(board);
-    
-    if ( isFourInLine )  return  winner?.name;
-    if (!isFourInLine && isATie ) return "Empate";
 
- 
+    const isATie = checkTie(board);
 
+    if (isFourInLine) return winner?.name;
+    if (!isFourInLine && isATie) return 'Empate';
 };

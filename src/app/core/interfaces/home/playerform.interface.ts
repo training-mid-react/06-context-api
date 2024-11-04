@@ -1,6 +1,6 @@
-import { IPlayer } from "../player.interface";
+import { IPlayer } from '../player.interface';
 
-export  interface IPlayerForm {
+export interface IPlayerForm {
     player1: IPlayer;
     player2: IPlayer;
 }

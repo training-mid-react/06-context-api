@@ -1,2 +1,2 @@
-export * from "./boardGame";
-export * from "./player.interface"
+export * from './boardGame';
+export * from './player.interface';

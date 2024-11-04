@@ -1,4 +1,4 @@
-import { OptionsColors } from "@core/types";
+import { OptionsColors } from '@core/types';
 
 export interface IPlayer {
     id: number;

@@ -1,2 +1,2 @@
-export * from "./player.type"
-export * from "./square.type"
+export * from './player.type';
+export * from './square.type';
