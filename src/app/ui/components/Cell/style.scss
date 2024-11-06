@@ -1,0 +1,52 @@
+@use './../../styles/constants.scss';
+
+.cell {
+  width: 100px;
+  height: 100px;
+  background-color: azure;
+  position: relative;
+  border-radius: 100%;
+  
+
+  &__player1 {
+    background-color: constants.$primary-color;
+    animation: dropToken 3s ease-in forwards;
+    z-index: 20;
+  }
+
+  &__player2 {
+    background-color: constants.$secondary-color;
+    animation: dropToken 3s linear forwards;
+    z-index: 20;
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    z-index: 40;
+  }
+
+  &__frame {
+    height: 10px;
+    background-color: black;
+    z-index: 40;
+  }
+}
+
+@keyframes dropToken {
+  0% {
+    transform: translateY(-900%);
+  }
+  90% {
+    transform: translateY(0);
+  }
+  95% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
