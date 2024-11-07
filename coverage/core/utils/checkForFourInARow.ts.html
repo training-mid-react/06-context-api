@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/21</span>
+                <span class='fraction'>21/21</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/12</span>
+                <span class='fraction'>12/12</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/2</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/21</span>
+                <span class='fraction'>21/21</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -107,84 +107,84 @@
 <a name='L42'></a><a href='#L42'>42</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">26x</span>
+<span class="cline-any cline-yes">26x</span>
+<span class="cline-any cline-yes">26x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">26x</span>
+<span class="cline-any cline-yes">30x</span>
+<span class="cline-any cline-yes">30x</span>
+<span class="cline-any cline-yes">30x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">26x</span>
+<span class="cline-any cline-yes">26x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">26x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">26x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">26x</span>
+<span class="cline-any cline-yes">26x</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { directions } from '../constants';
 import { IBoard, PLAYER } from '../interfaces';
 &nbsp;
-export const checkForFourInARow = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(</span></span>
+export const checkForFourInARow = (
   board: IBoard,
   row: number,
   col: number,
   player: PLAYER
 ): PLAYER | null =&gt; {
-  const countFourInARow = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(d</span>Row: number, dCol: number): number =&gt; {</span>
-    let count = <span class="cstat-no" title="statement not covered" >0;</span>
-    let r = <span class="cstat-no" title="statement not covered" >row;</span>
-    let c = <span class="cstat-no" title="statement not covered" >col;</span>
+  const countFourInARow = (dRow: number, dCol: number): number =&gt; {
+    let count = 0;
+    let r = row;
+    let c = col;
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    while (r &gt;= 0 &amp;&amp; r &lt; 6 &amp;&amp; c &gt;= 0 &amp;&amp; c &lt; 7 &amp;&amp; board[r][c] === player) {</span>
-<span class="cstat-no" title="statement not covered" >      count++;</span>
-<span class="cstat-no" title="statement not covered" >      r += dRow;</span>
-<span class="cstat-no" title="statement not covered" >      c += dCol;</span>
+    while (r &gt;= 0 &amp;&amp; r &lt; 6 &amp;&amp; c &gt;= 0 &amp;&amp; c &lt; 7 &amp;&amp; board[r][c] === player) {
+      count++;
+      r += dRow;
+      c += dCol;
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    r = row - dRow;</span>
-<span class="cstat-no" title="statement not covered" >    c = col - dCol;</span>
+    r = row - dRow;
+    c = col - dCol;
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    while (r &gt;= 0 &amp;&amp; r &lt; 6 &amp;&amp; c &gt;= 0 &amp;&amp; c &lt; 7 &amp;&amp; board[r][c] === player) {</span>
-<span class="cstat-no" title="statement not covered" >      count++;</span>
-<span class="cstat-no" title="statement not covered" >      r -= dRow;</span>
-<span class="cstat-no" title="statement not covered" >      c -= dCol;</span>
+    while (r &gt;= 0 &amp;&amp; r &lt; 6 &amp;&amp; c &gt;= 0 &amp;&amp; c &lt; 7 &amp;&amp; board[r][c] === player) {
+      count++;
+      r -= dRow;
+      c -= dCol;
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    return count;</span>
+    return count;
   };
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  for (let { row: r, col: c } of directions) {</span>
-    const consecutive = <span class="cstat-no" title="statement not covered" >countFourInARow(r, c);</span>
-<span class="cstat-no" title="statement not covered" >    if (consecutive &gt;= 4) {</span>
-<span class="cstat-no" title="statement not covered" >      return player;</span>
+  for (let { row: r, col: c } of directions) {
+    const consecutive = countFourInARow(r, c);
+    if (consecutive &gt;= 4) {
+      return player;
     }
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return null;</span>
+  return null;
 };
 &nbsp;</pre></td></tr></table></pre>
 
@@ -193,7 +193,7 @@ export const checkForFourInARow = <span class="cstat-no" title="statement not co
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2024-11-07T15:30:42.597Z
+                at 2024-11-07T18:35:38.819Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

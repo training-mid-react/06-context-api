@@ -6,9 +6,10 @@ export const useGameContext = () => {
   const {state, dispatch} = useContext(GameContext);
 
   const handleDrop = (columnIndex: number) => {
-    if (!state.winner) {
-      dispatch(dropToken(columnIndex));
+    if (state.winner || state.isDraw) {
+      return;
     }
+    dispatch(dropToken(columnIndex));
   };
 
   const handleReset = () => {
