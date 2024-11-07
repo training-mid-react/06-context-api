@@ -1,0 +1,27 @@
+@use './../../styles/mixins.scss' as mixins;
+
+.game {
+  &__background {
+    @include mixins.centeredFlex;
+    @include mixins.retroFontColor;
+
+    align-items: center;
+
+    background-color: rgb(80, 179, 85);
+    animation: move-background 10s linear infinite;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+  }
+
+  &__p {
+    height: 15px;
+    font-size:x-large;
+    color: #000;
+  }
+
+  &__button {
+    @include mixins.button;
+  }
+}
