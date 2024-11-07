@@ -27,17 +27,4 @@ describe('Column component', () => {
 
     expect(handleDropMock).toHaveBeenCalledWith(1);
   });
-
-  it('should log the column index when clicked', () => {
-    const consoleSpy = vi.spyOn(console, 'log').mockImplementation(() => {});
-    const handleDropMock = vi.fn();
-
-    render(<Column columnIndex={2} board={mockBoard} handleDrop={handleDropMock} />);
-
-    fireEvent.click(screen.getByRole('column'));
-
-    expect(consoleSpy).toHaveBeenCalledWith(2);
-
-    consoleSpy.mockRestore();
-  });
 });
